@@ -1,5 +1,40 @@
 [
   {
+    "objectID": "slides/slides.html#citation",
+    "href": "slides/slides.html#citation",
+    "title": "Slides",
+    "section": "Citation",
+    "text": "Citation\n“Considering reasons for the superior performance of the comb-like architectures to their star-shape analogs sheds light on several important future directions. One possibility is that the lower propensity of the comb-like conjugates for supramolecular assembly leaves AMPs to interact with bacterial membranes unencumbered by supramolecular assembly.” [Cui2025-dn]"
+  },
+  {
+    "objectID": "slides/slides.html#images",
+    "href": "slides/slides.html#images",
+    "title": "Slides",
+    "section": "Images",
+    "text": "Images"
+  },
+  {
+    "objectID": "slides/slides.html#python-code",
+    "href": "slides/slides.html#python-code",
+    "title": "Slides",
+    "section": "Python Code",
+    "text": "Python Code\n\n\nCode\nimport matplotlib.pyplot as plt \n\n# Example data\nx = [1, 2, 3, 4, 5]\ny = [3, 6, 9, 12, 15]\n\n# Create the line plot\nplt.plot(x, y, linestyle=\"-\", color=\"b\", label=\"y = 3x\")\n\n# Add labels and title\nplt.xlabel(\"X-axis\")\nplt.ylabel(\"Y-axis\")\nplt.title(\"Basic Line Plot\")\nplt.legend()\n\n# Show the plot\nplt.show()"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis.\n\n\nTempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu.\n\n\n\nimport matplotlib.pyplot as plt \n\n# Example data\nx = [1, 2, 3, 4, 5]\ny = [3, 6, 9, 12, 15]\n\n# Create the line plot\nplt.plot(x, y, linestyle=\"-\", color=\"b\", label=\"y = 3x\")\n\n# Add labels and title\nplt.xlabel(\"X-axis\")\nplt.ylabel(\"Y-axis\")\nplt.title(\"Basic Line Plot\")\nplt.legend()\n\n# Show the plot\nplt.show()"
+  },
+  {
+    "objectID": "about.html#section-1.1",
+    "href": "about.html#section-1.1",
+    "title": "About",
+    "section": "",
+    "text": "Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu.\n\n\n\nimport matplotlib.pyplot as plt \n\n# Example data\nx = [1, 2, 3, 4, 5]\ny = [3, 6, 9, 12, 15]\n\n# Create the line plot\nplt.plot(x, y, linestyle=\"-\", color=\"b\", label=\"y = 3x\")\n\n# Add labels and title\nplt.xlabel(\"X-axis\")\nplt.ylabel(\"Y-axis\")\nplt.title(\"Basic Line Plot\")\nplt.legend()\n\n# Show the plot\nplt.show()"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Simple Quarto Website",
@@ -7,18 +42,18 @@
     "text": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos."
   },
   {
-    "objectID": "index.html#section-1.1---columns",
-    "href": "index.html#section-1.1---columns",
+    "objectID": "index.html#section-1",
+    "href": "index.html#section-1",
     "title": "Simple Quarto Website",
-    "section": "Section 1.1 - Columns",
-    "text": "Section 1.1 - Columns\n\n\nLorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor.\n\nPulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.\n\n\n\nSection 1.1.1 - Bullets\n\nLorem ipsum dolor sit amet consectetur adipiscing elit.\nQuisque faucibus ex sapien vitae pellentesque sem placerat.\nIn id cursus mi pretium tellus duis convallis.\nTempus leo eu aenean sed diam urna tempor.\nPulvinar vivamus fringilla lacus nec metus bibendum egestas."
+    "section": "Section 1",
+    "text": "Section 1\nThis is all the text-related things, equations, and tables.\n\nColumns\n\n\nLorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor.\n\nPulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.\n\n\n\n\nBullets\n\nLorem ipsum dolor sit amet consectetur adipiscing elit.\nQuisque faucibus ex sapien vitae pellentesque sem placerat.\nIn id cursus mi pretium tellus duis convallis.\nTempus leo eu aenean sed diam urna tempor.\nPulvinar vivamus fringilla lacus nec metus bibendum egestas.\n\n\n\nMarkdown Table\n\n\n\nColumn 1\nColumn 2\n\n\n\n\n1\nA\n\n\n2\nB\n\n\n3\nC\n\n\n\n\n\nIn-Line Equation\nThis is some text with an in-line math equation: \\(y=mx+b\\).\n\n\nNon In-Line Math Equation\nThis is some math that is not in line: \\[ x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a} \\]\n\n\nFootnote\nThis is some text with a footnote.1\n\n\nQuote\nThis is a quote from William Shakespeare:\n\n“To be, or not to be: that is the question”\n\n\n\nCitation\n“Based on single-cell RNA sequencing, the preterm mice with diabetes had increased expression of genes related to the angiogenesis migration pathway-related in endothelial cells and increased expression of genes in the actin adhesion pathway in podocytes compared to term mice with diabetes.” (Cwiek et al. 2025)"
   },
   {
-    "objectID": "index.html#section-1.2---markdown-table-and-in-line-equation",
-    "href": "index.html#section-1.2---markdown-table-and-in-line-equation",
+    "objectID": "index.html#section-2",
+    "href": "index.html#section-2",
     "title": "Simple Quarto Website",
-    "section": "Section 1.2 - Markdown Table and In-Line Equation",
-    "text": "Section 1.2 - Markdown Table and In-Line Equation\n\n\n\nColumn 1\nColumn 2\n\n\n\n\n1\nA\n\n\n2\nB\n\n\n3\nC\n\n\n\nThis is some text with an in-line math equation: \\(y=mx+b\\).\n\nSection 1.2.1 - Non In-Line Math Equation, Footnote, and Quote\nThis is some math that is not in line: \\[ x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a} \\]\nThis is some text with a footnote.1\nThis is a quote from William Shakespeare:\n\n“To be, or not to be: that is the question”\n\n\n\nSection 1.2.2 - Images and Video\n\nimport os\nos.getcwd()\n\n'/home/ellie/georgetown/dsan_5000/lab-3-git-quarto-scp/lab-3/5000-lab-1.2/simple_quarto_website'\n\n\n\n\n\nSunset\n\n\n\n\n\nBeach\n\n\n\n\n\n\nSection 1.2.3 - Mermaid Diagram and Citation"
+    "section": "Section 2",
+    "text": "Section 2\nThis is all the images, video, and mermaid diagram.\n\nImages\n\n\n\nSunset\n\n\n\n\n\nBeach\n\n\n\n\nVideo\n\n\n\n\nMermaid Diagram\n\n\n\n\n\nerDiagram\n  STATION_INFORMATION }|--o{ STATION_STATUS : \"has status\"\n  STATION_INFORMATION }|--o{ TRIP_DATA : \"start from\"\n  STATION_INFORMATION }|--o{ TRIP_DATA : \"end at\"\n  STATION_INFORMATION }|--|| SYSTEM_REGIONS : \"has region\"\n\n  STATION_INFORMATION {\n    int64 station_id \"maps to station_status station_id\"\n    int64 short_name \"maps to trip_data start_station_id, end_station_id\"\n    object name\n    float64 lon\n    float64 lat\n    int64 region_id \"maps to system_regions region_id\"\n    int64 capacity\n    bool has_kiosk\n    bool has_key_dispenser\n    int64 last_updated\n    int64 ttl\n    datetime scrape_time\n    object station_services_name \"optional\"\n    float64 station_services_description \"optional\"\n    object station_services_bikes_availability \"optional\"\n    object station_services_docks_availability \"optional\"\n    float64 station_services_off_dock_remaining_bike_capacity \"optional\"\n    float64 station_services_off_dock_bikes_count \"optional\"\n    float64 station_services_schedule_description \"optional\"\n  }\n\n  STATION_STATUS {\n    int64 station_id \"maps to station_information station_id\"\n    int64 num_bikes_available\n    int64 num_docks_available\n    int64 num_bikes_disabled\n    int64 num_docks_disabled\n    int64 num_ebikes_available\n    bool has_available_keys\n    bool is_installed\n    bool is_returning\n    bool is_renting\n    int64 last_updated\n    int64 last_reported\n    int64 ttl\n    datetime scrape_time\n    object station_status \"optional\"\n    bool valet_active \"optional\"\n    float64 valet_dock_blocked_count \"optional\"\n    float64 valet_valet_revision \"optional\"\n    float64 valet_off_dock_capacity \"optional\"\n    float64 valet_off_dock_count \"optional\"\n  }\n\n  FREE_BIKE_STATUS {\n    object bike_id\n    float64 lat\n    float64 lon\n    bool is_reserved\n    bool is_disabled\n    int64 last_updated\n    int64 ttl\n    datetime scrape_time\n  }\n\n  TRIP_DATA {\n    datetime started_at\n    datetime ended_at\n    int64 start_station_id \"maps to station_information short_name\"\n    int64 end_station_id \"maps to station_information short_name\"\n    bool member_casual\n    object bike_number \"optional\"\n    object ride_id \"optional\"\n    int64 rideable_type \"optional\"\n  }\n\n  SYSTEM_REGIONS {\n    int64 region_id \"maps to station_information region_id\"\n    object name\n  }"
   },
   {
     "objectID": "index.html#footnotes",
@@ -26,12 +61,5 @@
     "title": "Simple Quarto Website",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nThis is the footnote information from earlier!↩︎"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
   }
 ]

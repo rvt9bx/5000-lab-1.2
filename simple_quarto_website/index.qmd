@@ -1,15 +1,21 @@
 ---
 title: "Simple Quarto Website"
+bibliography: reference.bib
 ---
 
 # Introduction 
 
 Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
 
-# Table of Contents 
+# Content
 
+This is the content included in Component 4 of the Assignment.
 
-## Section 1.1 - Columns 
+## Section 1
+
+This is all the text-related things, equations, and tables.
+
+### Columns
 
 ::: columns
 ::: column
@@ -21,11 +27,10 @@ Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapi
 ::: column
 
 Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. 
-
 :::
 :::
 
-### Section 1.1.1 - Bullets
+### Bullets
 
 - Lorem ipsum dolor sit amet consectetur adipiscing elit. 
 - Quisque faucibus ex sapien vitae pellentesque sem placerat. 
@@ -33,7 +38,7 @@ Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl 
 - Tempus leo eu aenean sed diam urna tempor. 
 - Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
 
-## Section 1.2 - Markdown Table and In-Line Equation 
+### Markdown Table 
 
 | Column 1 | Column 2 |
 | ----------- | ----------- |
@@ -41,30 +46,127 @@ Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl 
 | 2 | B |
 | 3 | C |
 
+### In-Line Equation
+
 This is some text with an in-line math equation: $y=mx+b$. 
 
-### Section 1.2.1 - Non In-Line Math Equation, Footnote, and Quote 
+### Non In-Line Math Equation 
 
 This is some math that is not in line:
 $$ x = \frac{-b \pm \sqrt{b^2-4ac}}{2a} $$
+
+### Footnote
 
 This is some text with a footnote.[^1]
 
 [^1]: This is the footnote information from earlier!
 
+### Quote
+
 This is a quote from William Shakespeare: 
 
 > "To be, or not to be: that is the question"
 
-### Section 1.2.2 - Images and Video 
+### Citation
 
-![Sunset](images/sunset.jpeg)
+"Based on single-cell RNA sequencing, the preterm mice with diabetes had increased expression of genes related to the angiogenesis migration pathway-related in endothelial cells and increased expression of genes in the actin adhesion pathway in podocytes compared to term mice with diabetes." [@cwiek2025preterm]
 
-![Beach](images/beach.jpeg)
+
+## Section 2
+
+This is all the images, video, and mermaid diagram. 
+
+### Images
+
+![Sunset](images/sunset.JPEG)
+
+![Beach](images/beach.JPEG)
+
+### Video 
 
 <iframe width="560" height="315" 
   src="https://www.youtube.com/embed/YINamUvOYhA"
   frameborder="0" allowfullscreen>
 </iframe>
 
-### Section 1.2.3 - Mermaid Diagram and Citation 
+### Mermaid Diagram
+
+```{mermaid}
+erDiagram
+  STATION_INFORMATION }|--o{ STATION_STATUS : "has status"
+  STATION_INFORMATION }|--o{ TRIP_DATA : "start from"
+  STATION_INFORMATION }|--o{ TRIP_DATA : "end at"
+  STATION_INFORMATION }|--|| SYSTEM_REGIONS : "has region"
+
+  STATION_INFORMATION {
+    int64 station_id "maps to station_status station_id"
+    int64 short_name "maps to trip_data start_station_id, end_station_id"
+    object name
+    float64 lon
+    float64 lat
+    int64 region_id "maps to system_regions region_id"
+    int64 capacity
+    bool has_kiosk
+    bool has_key_dispenser
+    int64 last_updated
+    int64 ttl
+    datetime scrape_time
+    object station_services_name "optional"
+    float64 station_services_description "optional"
+    object station_services_bikes_availability "optional"
+    object station_services_docks_availability "optional"
+    float64 station_services_off_dock_remaining_bike_capacity "optional"
+    float64 station_services_off_dock_bikes_count "optional"
+    float64 station_services_schedule_description "optional"
+  }
+
+  STATION_STATUS {
+    int64 station_id "maps to station_information station_id"
+    int64 num_bikes_available
+    int64 num_docks_available
+    int64 num_bikes_disabled
+    int64 num_docks_disabled
+    int64 num_ebikes_available
+    bool has_available_keys
+    bool is_installed
+    bool is_returning
+    bool is_renting
+    int64 last_updated
+    int64 last_reported
+    int64 ttl
+    datetime scrape_time
+    object station_status "optional"
+    bool valet_active "optional"
+    float64 valet_dock_blocked_count "optional"
+    float64 valet_valet_revision "optional"
+    float64 valet_off_dock_capacity "optional"
+    float64 valet_off_dock_count "optional"
+  }
+
+  FREE_BIKE_STATUS {
+    object bike_id
+    float64 lat
+    float64 lon
+    bool is_reserved
+    bool is_disabled
+    int64 last_updated
+    int64 ttl
+    datetime scrape_time
+  }
+
+  TRIP_DATA {
+    datetime started_at
+    datetime ended_at
+    int64 start_station_id "maps to station_information short_name"
+    int64 end_station_id "maps to station_information short_name"
+    bool member_casual
+    object bike_number "optional"
+    object ride_id "optional"
+    int64 rideable_type "optional"
+  }
+
+  SYSTEM_REGIONS {
+    int64 region_id "maps to station_information region_id"
+    object name
+  }
+```

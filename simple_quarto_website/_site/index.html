@@ -20,42 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
 }
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
 }
-</style>
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -102,6 +87,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -156,9 +144,13 @@ window.Quarto = {
     <a class="nav-link active" href="./index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="./about.ipynb"> 
-<span class="menu-text"></span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./slides/slides.html"> 
+<span class="menu-text">Slides</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -177,17 +169,24 @@ window.Quarto = {
    
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#table-of-contents" id="toc-table-of-contents" class="nav-link" data-scroll-target="#table-of-contents">Table of Contents</a>
+  <li><a href="#content" id="toc-content" class="nav-link" data-scroll-target="#content">Content</a>
   <ul class="collapse">
-  <li><a href="#section-1.1---columns" id="toc-section-1.1---columns" class="nav-link" data-scroll-target="#section-1.1---columns">Section 1.1 - Columns</a>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">Section 1</a>
   <ul class="collapse">
-  <li><a href="#section-1.1.1---bullets" id="toc-section-1.1.1---bullets" class="nav-link" data-scroll-target="#section-1.1.1---bullets">Section 1.1.1 - Bullets</a></li>
+  <li><a href="#columns" id="toc-columns" class="nav-link" data-scroll-target="#columns">Columns</a></li>
+  <li><a href="#bullets" id="toc-bullets" class="nav-link" data-scroll-target="#bullets">Bullets</a></li>
+  <li><a href="#markdown-table" id="toc-markdown-table" class="nav-link" data-scroll-target="#markdown-table">Markdown Table</a></li>
+  <li><a href="#in-line-equation" id="toc-in-line-equation" class="nav-link" data-scroll-target="#in-line-equation">In-Line Equation</a></li>
+  <li><a href="#non-in-line-math-equation" id="toc-non-in-line-math-equation" class="nav-link" data-scroll-target="#non-in-line-math-equation">Non In-Line Math Equation</a></li>
+  <li><a href="#footnote" id="toc-footnote" class="nav-link" data-scroll-target="#footnote">Footnote</a></li>
+  <li><a href="#quote" id="toc-quote" class="nav-link" data-scroll-target="#quote">Quote</a></li>
+  <li><a href="#citation" id="toc-citation" class="nav-link" data-scroll-target="#citation">Citation</a></li>
   </ul></li>
-  <li><a href="#section-1.2---markdown-table-and-in-line-equation" id="toc-section-1.2---markdown-table-and-in-line-equation" class="nav-link" data-scroll-target="#section-1.2---markdown-table-and-in-line-equation">Section 1.2 - Markdown Table and In-Line Equation</a>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">Section 2</a>
   <ul class="collapse">
-  <li><a href="#section-1.2.1---non-in-line-math-equation-footnote-and-quote" id="toc-section-1.2.1---non-in-line-math-equation-footnote-and-quote" class="nav-link" data-scroll-target="#section-1.2.1---non-in-line-math-equation-footnote-and-quote">Section 1.2.1 - Non In-Line Math Equation, Footnote, and Quote</a></li>
-  <li><a href="#section-1.2.2---images-and-video" id="toc-section-1.2.2---images-and-video" class="nav-link" data-scroll-target="#section-1.2.2---images-and-video">Section 1.2.2 - Images and Video</a></li>
-  <li><a href="#section-1.2.3---mermaid-diagram-and-citation" id="toc-section-1.2.3---mermaid-diagram-and-citation" class="nav-link" data-scroll-target="#section-1.2.3---mermaid-diagram-and-citation">Section 1.2.3 - Mermaid Diagram and Citation</a></li>
+  <li><a href="#images" id="toc-images" class="nav-link" data-scroll-target="#images">Images</a></li>
+  <li><a href="#video" id="toc-video" class="nav-link" data-scroll-target="#video">Video</a></li>
+  <li><a href="#mermaid-diagram" id="toc-mermaid-diagram" class="nav-link" data-scroll-target="#mermaid-diagram">Mermaid Diagram</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -219,10 +218,14 @@ window.Quarto = {
 <h1>Introduction</h1>
 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
 </section>
-<section id="table-of-contents" class="level1">
-<h1>Table of Contents</h1>
-<section id="section-1.1---columns" class="level2">
-<h2 class="anchored" data-anchor-id="section-1.1---columns">Section 1.1 - Columns</h2>
+<section id="content" class="level1">
+<h1>Content</h1>
+<p>This is the content included in Component 4 of the Assignment.</p>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1">Section 1</h2>
+<p>This is all the text-related things, equations, and tables.</p>
+<section id="columns" class="level3">
+<h3 class="anchored" data-anchor-id="columns">Columns</h3>
 <div class="columns">
 <div class="column">
 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor.</p>
@@ -230,8 +233,9 @@ window.Quarto = {
 <p>Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
 </div>
 </div>
-<section id="section-1.1.1---bullets" class="level3">
-<h3 class="anchored" data-anchor-id="section-1.1.1---bullets">Section 1.1.1 - Bullets</h3>
+</section>
+<section id="bullets" class="level3">
+<h3 class="anchored" data-anchor-id="bullets">Bullets</h3>
 <ul>
 <li>Lorem ipsum dolor sit amet consectetur adipiscing elit.</li>
 <li>Quisque faucibus ex sapien vitae pellentesque sem placerat.</li>
@@ -240,9 +244,8 @@ window.Quarto = {
 <li>Pulvinar vivamus fringilla lacus nec metus bibendum egestas.</li>
 </ul>
 </section>
-</section>
-<section id="section-1.2---markdown-table-and-in-line-equation" class="level2">
-<h2 class="anchored" data-anchor-id="section-1.2---markdown-table-and-in-line-equation">Section 1.2 - Markdown Table and In-Line Equation</h2>
+<section id="markdown-table" class="level3">
+<h3 class="anchored" data-anchor-id="markdown-table">Markdown Table</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -265,42 +268,145 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
+</section>
+<section id="in-line-equation" class="level3">
+<h3 class="anchored" data-anchor-id="in-line-equation">In-Line Equation</h3>
 <p>This is some text with an in-line math equation: <span class="math inline">\(y=mx+b\)</span>.</p>
-<section id="section-1.2.1---non-in-line-math-equation-footnote-and-quote" class="level3">
-<h3 class="anchored" data-anchor-id="section-1.2.1---non-in-line-math-equation-footnote-and-quote">Section 1.2.1 - Non In-Line Math Equation, Footnote, and Quote</h3>
+</section>
+<section id="non-in-line-math-equation" class="level3">
+<h3 class="anchored" data-anchor-id="non-in-line-math-equation">Non In-Line Math Equation</h3>
 <p>This is some math that is not in line: <span class="math display">\[ x = \frac{-b \pm \sqrt{b^2-4ac}}{2a} \]</span></p>
+</section>
+<section id="footnote" class="level3">
+<h3 class="anchored" data-anchor-id="footnote">Footnote</h3>
 <p>This is some text with a footnote.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+</section>
+<section id="quote" class="level3">
+<h3 class="anchored" data-anchor-id="quote">Quote</h3>
 <p>This is a quote from William Shakespeare:</p>
 <blockquote class="blockquote">
 <p>“To be, or not to be: that is the question”</p>
 </blockquote>
 </section>
-<section id="section-1.2.2---images-and-video" class="level3">
-<h3 class="anchored" data-anchor-id="section-1.2.2---images-and-video">Section 1.2.2 - Images and Video</h3>
-<div id="2522181e" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>os.getcwd()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="1">
-<pre><code>'/home/ellie/georgetown/dsan_5000/lab-3-git-quarto-scp/lab-3/5000-lab-1.2/simple_quarto_website'</code></pre>
-</div>
-</div>
+<section id="citation" class="level3">
+<h3 class="anchored" data-anchor-id="citation">Citation</h3>
+<p>“Based on single-cell RNA sequencing, the preterm mice with diabetes had increased expression of genes related to the angiogenesis migration pathway-related in endothelial cells and increased expression of genes in the actin adhesion pathway in podocytes compared to term mice with diabetes.” <span class="citation" data-cites="cwiek2025preterm">(<a href="#ref-cwiek2025preterm" role="doc-biblioref">Cwiek et al. 2025</a>)</span></p>
+</section>
+</section>
+<section id="section-2" class="level2">
+<h2 class="anchored" data-anchor-id="section-2">Section 2</h2>
+<p>This is all the images, video, and mermaid diagram.</p>
+<section id="images" class="level3">
+<h3 class="anchored" data-anchor-id="images">Images</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/sunset.jpeg" class="img-fluid figure-img"></p>
+<p><img src="images/sunset.JPEG" class="img-fluid figure-img"></p>
 <figcaption>Sunset</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/beach.jpeg" class="img-fluid figure-img"></p>
+<p><img src="images/beach.JPEG" class="img-fluid figure-img"></p>
 <figcaption>Beach</figcaption>
 </figure>
 </div>
+</section>
+<section id="video" class="level3">
+<h3 class="anchored" data-anchor-id="video">Video</h3>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/YINamUvOYhA" frameborder="0" allowfullscreen="">
 </iframe>
 </section>
-<section id="section-1.2.3---mermaid-diagram-and-citation" class="level3">
-<h3 class="anchored" data-anchor-id="section-1.2.3---mermaid-diagram-and-citation">Section 1.2.3 - Mermaid Diagram and Citation</h3>
+<section id="mermaid-diagram" class="level3">
+<h3 class="anchored" data-anchor-id="mermaid-diagram">Mermaid Diagram</h3>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">erDiagram
+  STATION_INFORMATION }|--o{ STATION_STATUS : "has status"
+  STATION_INFORMATION }|--o{ TRIP_DATA : "start from"
+  STATION_INFORMATION }|--o{ TRIP_DATA : "end at"
+  STATION_INFORMATION }|--|| SYSTEM_REGIONS : "has region"
+
+  STATION_INFORMATION {
+    int64 station_id "maps to station_status station_id"
+    int64 short_name "maps to trip_data start_station_id, end_station_id"
+    object name
+    float64 lon
+    float64 lat
+    int64 region_id "maps to system_regions region_id"
+    int64 capacity
+    bool has_kiosk
+    bool has_key_dispenser
+    int64 last_updated
+    int64 ttl
+    datetime scrape_time
+    object station_services_name "optional"
+    float64 station_services_description "optional"
+    object station_services_bikes_availability "optional"
+    object station_services_docks_availability "optional"
+    float64 station_services_off_dock_remaining_bike_capacity "optional"
+    float64 station_services_off_dock_bikes_count "optional"
+    float64 station_services_schedule_description "optional"
+  }
+
+  STATION_STATUS {
+    int64 station_id "maps to station_information station_id"
+    int64 num_bikes_available
+    int64 num_docks_available
+    int64 num_bikes_disabled
+    int64 num_docks_disabled
+    int64 num_ebikes_available
+    bool has_available_keys
+    bool is_installed
+    bool is_returning
+    bool is_renting
+    int64 last_updated
+    int64 last_reported
+    int64 ttl
+    datetime scrape_time
+    object station_status "optional"
+    bool valet_active "optional"
+    float64 valet_dock_blocked_count "optional"
+    float64 valet_valet_revision "optional"
+    float64 valet_off_dock_capacity "optional"
+    float64 valet_off_dock_count "optional"
+  }
+
+  FREE_BIKE_STATUS {
+    object bike_id
+    float64 lat
+    float64 lon
+    bool is_reserved
+    bool is_disabled
+    int64 last_updated
+    int64 ttl
+    datetime scrape_time
+  }
+
+  TRIP_DATA {
+    datetime started_at
+    datetime ended_at
+    int64 start_station_id "maps to station_information short_name"
+    int64 end_station_id "maps to station_information short_name"
+    bool member_casual
+    object bike_number "optional"
+    object ride_id "optional"
+    int64 rideable_type "optional"
+  }
+
+  SYSTEM_REGIONS {
+    int64 region_id "maps to station_information region_id"
+    object name
+  }
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+
 
 
 </section>
@@ -308,7 +414,11 @@ window.Quarto = {
 </section>
 
 
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-cwiek2025preterm" class="csl-entry" role="listitem">
+Cwiek, Aleksandra, Rachel K Dailey, Ayyappa Kumar Sista Kameshwar, Masako Suzuki, Jaya Isaac, Kimberly deRonde, Mark Conaway, et al. 2025. <span>“Preterm Birth Increases Susceptibility to Hyperglycemia Induced Glomerular Alterations in Male Mice.”</span> <em>Scientific Reports</em> 15 (1): 18934.
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
 <li id="fn1"><p>This is the footnote information from earlier!<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>

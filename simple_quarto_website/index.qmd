@@ -1,0 +1,70 @@
+---
+title: "Simple Quarto Website"
+---
+
+# Introduction 
+
+Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+
+# Table of Contents 
+
+
+## Section 1.1 - Columns 
+
+::: columns
+::: column
+
+Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. 
+
+:::
+
+::: column
+
+Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos. 
+
+:::
+:::
+
+### Section 1.1.1 - Bullets
+
+- Lorem ipsum dolor sit amet consectetur adipiscing elit. 
+- Quisque faucibus ex sapien vitae pellentesque sem placerat. 
+- In id cursus mi pretium tellus duis convallis. 
+- Tempus leo eu aenean sed diam urna tempor. 
+- Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
+
+## Section 1.2 - Markdown Table and In-Line Equation 
+
+| Column 1 | Column 2 |
+| ----------- | ----------- |
+| 1 | A |
+| 2 | B |
+| 3 | C |
+
+This is some text with an in-line math equation: $y=mx+b$. 
+
+### Section 1.2.1 - Non In-Line Math Equation, Footnote, and Quote 
+
+This is some math that is not in line:
+$$ x = \frac{-b \pm \sqrt{b^2-4ac}}{2a} $$
+
+This is some text with a footnote.[^1]
+
+[^1]: This is the footnote information from earlier!
+
+This is a quote from William Shakespeare: 
+
+> "To be, or not to be: that is the question"
+
+### Section 1.2.2 - Images and Video 
+
+![Sunset](images/sunset.jpeg)
+
+![Beach](images/beach.jpeg)
+
+<iframe width="560" height="315" 
+  src="https://www.youtube.com/embed/YINamUvOYhA"
+  frameborder="0" allowfullscreen>
+</iframe>
+
+### Section 1.2.3 - Mermaid Diagram and Citation 

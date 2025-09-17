@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Simple Quarto Website",
+    "section": "",
+    "text": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos."
+  },
+  {
+    "objectID": "index.html#section-1.1---columns",
+    "href": "index.html#section-1.1---columns",
+    "title": "Simple Quarto Website",
+    "section": "Section 1.1 - Columns",
+    "text": "Section 1.1 - Columns\n\n\nLorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor.\n\nPulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.\n\n\n\nSection 1.1.1 - Bullets\n\nLorem ipsum dolor sit amet consectetur adipiscing elit.\nQuisque faucibus ex sapien vitae pellentesque sem placerat.\nIn id cursus mi pretium tellus duis convallis.\nTempus leo eu aenean sed diam urna tempor.\nPulvinar vivamus fringilla lacus nec metus bibendum egestas."
+  },
+  {
+    "objectID": "index.html#section-1.2---markdown-table-and-in-line-equation",
+    "href": "index.html#section-1.2---markdown-table-and-in-line-equation",
+    "title": "Simple Quarto Website",
+    "section": "Section 1.2 - Markdown Table and In-Line Equation",
+    "text": "Section 1.2 - Markdown Table and In-Line Equation\n\n\n\nColumn 1\nColumn 2\n\n\n\n\n1\nA\n\n\n2\nB\n\n\n3\nC\n\n\n\nThis is some text with an in-line math equation: \\(y=mx+b\\).\n\nSection 1.2.1 - Non In-Line Math Equation, Footnote, and Quote\nThis is some math that is not in line: \\[ x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a} \\]\nThis is some text with a footnote.1\nThis is a quote from William Shakespeare:\n\n“To be, or not to be: that is the question”\n\n\n\nSection 1.2.2 - Images and Video\n\nimport os\nos.getcwd()\n\n'/home/ellie/georgetown/dsan_5000/lab-3-git-quarto-scp/lab-3/5000-lab-1.2/simple_quarto_website'\n\n\n\n\n\nSunset\n\n\n\n\n\nBeach\n\n\n\n\n\n\nSection 1.2.3 - Mermaid Diagram and Citation"
+  },
+  {
+    "objectID": "index.html#footnotes",
+    "href": "index.html#footnotes",
+    "title": "Simple Quarto Website",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThis is the footnote information from earlier!↩︎"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  }
+]
